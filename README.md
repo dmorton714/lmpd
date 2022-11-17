@@ -16,7 +16,8 @@ The purpose of the project was to determine if the LMPD had a racially motivated
 <img src=”(your image URL here)”>
 
 <h3> Citations of full LMPD, louisville population and citations. 
-<img src=”(your image URL here)”>
+<img src="https://github.com/dmorton714/lmpd/blob/master/gender.png?raw=true" alt="Flowers in Chania">
+
 
 <h3> Officer citations by gender and Louisville population </h3>
 <img src=”https://github.com/dmorton714/lmpd/blob/master/gender.png?raw=true”>
