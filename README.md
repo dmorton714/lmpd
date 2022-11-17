@@ -3,10 +3,10 @@
 <h2>Code Louisville Scope </h2>
 This project was created to fufill the requirments of Code Louisville’s Python Data Analytics 2 class. The project had 4 requirements as follow. 
 <ol>
-<li> 1. Read in two data sets. </li>
-<li> 2. Make 3 plots </li>
-<li> 3. Make a virtual environment for the project </li>
-<li> 4. Annotate our code </li>
+<li> Read in two data sets. </li>
+<li> Make 3 plots </li>
+<li> Make a virtual environment for the project </li>
+<li> Annotate our code </li>
 </ol>
 
 <h2> About The Data </h2>
