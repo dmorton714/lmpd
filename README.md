@@ -46,4 +46,16 @@ From the directory pip install the requirements.txt file by running "pip install
 <li> import requests </li>
 <li> import json </li>
 
+<h3>Project Requirements:</h3>
+Feature 1 Read data - Read data set from 2 csv file. 
+<br>
+Feature 2 - Manipulate and clean your data: In each data set i cleanded the sheets by removing missing data and dropping data that was not needed. I then merged the 2 data sets into one to work from. 
+<br>
+Feature 3 - Visualize data - Various plots were made to understand that data and a final cleaned cheet was made to compare that data. 
+<br>
+Feature 4 - Utilized a virtual environment and include instructions in the README on how the user should run.
+<br>
+Feature 5 - Interpreted the data by annotating the code via markdown cells.
+<br>
+<br>
 <h2> FIN </h2>
