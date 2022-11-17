@@ -26,4 +26,16 @@ The purpose of the project was to determine if the LMPD had a racially motivated
 
 I plan to work this project a bit more to determine if the gender and race come into play on the citations. I would also like to add a Tableau dashboard to the project as well. 
 
+<h1> Requirements </h1>
+
+<li> import pandas as pd </li>
+<li> import matplotlib.pyplot as plt </li>
+<li> import matplotlib.dates as mdates </li>
+<li> import datetime </li>
+<li> import csv </li>
+<li> import numpy as np </li>
+<li> import urllib.request </li>
+<li> import requests </li>
+<li> import json </li>
+
 <h2> FIN </h2>
