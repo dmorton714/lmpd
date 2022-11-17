@@ -29,6 +29,10 @@ I plan to work this project a bit more to determine if the gender and race come 
 <h1> Requirements </h1>
 
 This project was made with Anaconda installed, using the below packages in VS Code using Jupyter notebooks. PIP install packages as needed. Alternatively a virtual environment is included. 
+<br>
+Documentation for venv: (https://docs.python.org/3/tutorial/venv.html)
+<br>
+From the directory pip install the requirements.txt file by running "pip install -r requirements.txt"
 
 <li> import pandas as pd </li>
 <li> import matplotlib.pyplot as plt </li>
