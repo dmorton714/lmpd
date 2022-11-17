@@ -13,16 +13,14 @@ This project was created to fufill the requirments of Code Louisville’s Python
 The purpose of the project was to determine if the LMPD had a racially motivated citation record. To make the calculations I used CSV sheets from Louisville Metro Open Data site. The first sheet was the police force which has all sworn officers with age sex etc. The next data set includes all the issued citations from the police with officers and drivers data. The final portion of data I used was from the census bureau to make a data frame for Louisville base line population. From the main graph we can determine that the black population did get more citations that our populations representation. The Hispanic police officers were the only group of officers that cited black drivers less that the Louisville population. However the real surprise of the data was that Hispanic population was cited above the population average by every race of officers. Ironically the Hispanic officer population was the only group of officers to cite above the population average. Alternatively we can conclude from the data the even though the population is almost equal in terms of genders. Males are almost twice as likely to receive a citation. 
 
 <h3> Citations by gender with population </h3>
-<img src=”(your image URL here)”>
+<img src="https://github.com/dmorton714/lmpd/blob/master/race.png?raw=true" alt="Flowers in Chania">
 
 <h3> Citations of full LMPD, louisville population and citations. 
-<img src="https://github.com/dmorton714/lmpd/blob/master/gender.png?raw=true" alt="Flowers in Chania">
+<img src="https://github.com/dmorton714/lmpd/blob/master/full-force.png?raw=true" alt="Flowers in Chania">
 
 
 <h3> Officer citations by gender and Louisville population </h3>
-<img src=”https://github.com/dmorton714/lmpd/blob/master/gender.png?raw=true”>
- title =”(graph)”
-<img src=”(graph)” alt=”Image” height=”(300)” width=”(300)”>.
+<img src="https://github.com/dmorton714/lmpd/blob/master/gender.png?raw=true" alt="Flowers in Chania">
 
 
 
