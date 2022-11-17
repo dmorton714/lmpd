@@ -28,6 +28,8 @@ I plan to work this project a bit more to determine if the gender and race come 
 
 <h1> Requirements </h1>
 
+This project was made with Anaconda installed, using the below packages in VS Code using Jupyter notebooks. PIP install packages as needed. Alternatively a virtual environment is included. 
+
 <li> import pandas as pd </li>
 <li> import matplotlib.pyplot as plt </li>
 <li> import matplotlib.dates as mdates </li>
