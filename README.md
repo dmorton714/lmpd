@@ -20,6 +20,10 @@ The purpose of the project was to determine if the LMPD had a racially motivated
 
 <h3> Officer citations by gender and Louisville population </h3>
 <img src=”https://github.com/dmorton714/lmpd/blob/master/gender.png?raw=true”>
+ title =”(graph)”
+<img src=”(graph)” alt=”Image” height=”(300)” width=”(300)”>.
+
+
 
 I plan to work this project a bit more to determine if the gender and race come into play on the citations. I would also like to add a Tableau dashboard to the project as well. 
 
