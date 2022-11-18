@@ -3,7 +3,7 @@ matplotlib.pyplot
 matplotlib.dates
 datetime
 csv
-numpy as np
+numpy
 urllib.request
 requests
 json
