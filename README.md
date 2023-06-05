@@ -35,7 +35,7 @@ From the directory pip install the requirements.txt file by running "pip install
 <h3>Project Requirements:</h3>
 Feature 1 Read data - Read data set from 2 csv file. 
 <br>
-Feature 2 - Manipulate and clean your data: In each data set i cleanded the sheets by removing missing data and dropping data that was not needed. I then merged the 2 data sets into one to work from. 
+Feature 2 - Manipulate and clean your data: In each data set I cleanded the sheets by removing missing data and dropping data that was not needed. I then joined the 2 data sets into one to work from. 
 <br>
 Feature 3 - Visualize data - Various plots were made to understand that data and a final cleaned cheet was made to compare that data. 
 <br>
