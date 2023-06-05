@@ -1,4 +1,4 @@
-<h1> Racism in Louisville Metro Police department </h1>
+<h1> Louisville Metro Police Department Bias Study </h1>
 
 <h2>Code Louisville Scope </h2>
 This project was created to fulfill the requirements of Code Louisville’s Python Data Analytics 2 class. The project had 4 requirements as follow. 
