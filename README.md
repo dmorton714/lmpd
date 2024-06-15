@@ -9,6 +9,10 @@ This project was created to fulfill the requirements of Code Louisville’s Pyth
 <li> Annotate our code </li>
 </ol>
 
+### I revisited this project recently to add API calls to everything and play with a few new plotting ideas.
+
+The API calls are built into the `data_builder.py` file. You will need a API key for the Cencus data. Other than that pull which data you need and proceed to the `revisited.ipynb` file. 
+
 <h2> About The Data </h2>
 The purpose of the project was to determine if the LMPD had a racially motivated citation record. To make the calculations I used CSV sheets from Louisville Metro Open Data site. The first sheet was the police force which has all sworn officers with age sex etc. The next data set includes all the issued citations from the police with officers and drivers data. The final portion of data I used was from the census bureau to make a data frame for Louisville base line population. From the main graph we can determine that the black population did get more citations that our populations representation. The Hispanic police officers were the only group of officers that cited black drivers less that the Louisville population. However the real surprise of the data was that Hispanic population was cited above the population average by every race of officers. Ironically the Hispanic officer population was the only group of officers to cite above the population average. Alternatively we can conclude from the data the even though the population is almost equal in terms of genders. Males are almost twice as likely to receive a citation. 
 
@@ -21,16 +25,6 @@ Documentation for venv: (https://docs.python.org/3/tutorial/venv.html)
 <br>
 <br>
 From the directory pip install the requirements.txt file by running "pip install -r requirements.txt"
-
-<li> import pandas as pd </li>
-<li> import matplotlib.pyplot as plt </li>
-<li> import matplotlib.dates as mdates </li>
-<li> import datetime </li>
-<li> import csv </li>
-<li> import numpy as np </li>
-<li> import urllib.request </li>
-<li> import requests </li>
-<li> import json </li>
 
 <h3>Project Requirements:</h3>
 Feature 1 Read data - Read data set from 2 csv file. 
@@ -55,10 +49,20 @@ folder in GitBash/Terminal.
 1. Install the required packages. 
 1. When you are done working on your repo, deactivate the virtual environment.
 
-Virtual Environment Commands
+### Virtual Environment Commands
 | Command | Linux/Mac | GitBash |
 | ------- | --------- | ------- |
 | Create | `python3 -m venv venv` | `python -m venv venv` |
 | Activate | `source venv/bin/activate` | `source venv/Scripts/activate` |
 | Install | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
 | Deactivate | `deactivate` | `deactivate` |
+
+***final_code.ipynb no longer works as the data is now formatted differently from Louisville open data. I removed the data before realizing that. Outputs are saved for viewing. 
+
+<!-- ## ARCGIS pip install Instructions 
+
+1. `pip install --upgrade pip setuptools wheel`
+1. `pip install "keyring>=19,<=21.8.*"`
+1. `pip install --use-pep517 arcgis==1.8.5.post3`
+
+In most recent build I have removed need for arcgis all together. Just run `data_builder.py` -->
