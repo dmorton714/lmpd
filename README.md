@@ -1,5 +1,19 @@
 <h1> Louisville Metro Police Department Bias Study </h1>
 
+## todo 
+
+### working in Cleaning and data builder 
+
+- [x] Build API test 
+- [x] Remove repeated code DRY 
+- [ ] Build classes 
+  - [x] Data builder done 
+  - [ ] Cleaning class needed 
+  - [ ] plot classes needed 
+- [ ] Rework plots use plotly
+  - [x] gender plots done   
+- [ ] use dash for the dashboard
+
 <h2>Code Louisville Scope </h2>
 This project was created to fulfill the requirements of Code Louisville’s Python Data Analytics 2 class. The project had 4 requirements as follow. 
 <ol>
