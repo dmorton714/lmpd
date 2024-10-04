@@ -1,3 +1,5 @@
+Logic for API test inside the class. 
+
 def api test(test_api_call, api_call, col_list) 
   run api call to get 10 rows 
     if connection error 
@@ -13,5 +15,4 @@ def api test(test_api_call, api_call, col_list)
 
   If no errors 
     api_call
-
 

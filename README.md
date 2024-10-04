@@ -13,6 +13,7 @@
 - [ ] Rework plots use plotly
   - [x] gender plots done   
 - [ ] use dash for the dashboard
+- [ ] make new requirements.txt
 
 <h2>Code Louisville Scope </h2>
 This project was created to fulfill the requirements of Code Louisville’s Python Data Analytics 2 class. The project had 4 requirements as follow. 
