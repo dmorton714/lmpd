@@ -3,17 +3,19 @@ import pandas as pd
 import os
 from api_key import api_key
 
+
 class DataBuilder:
     def __init__(self, api_key):
         self.api_key = api_key
-        self.citation_url = 'https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/LMPD_STOP_DATA_2019_(2)/FeatureServer/0'
-        self.employee_url = 'https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/LMPD_Demographics/FeatureServer/0'
-        self.census_url = f"https://api.census.gov/data/2020/acs/acs5?get=NAME,B01001_001E,B01001_002E,B01001_026E,B02001_001E,B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B02001_007E,B02001_008E&for=county:111&in=state:21&key={api_key}"
-        
+        self.citation_url = 'https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/LMPD_STOP_DATA_2019_(2)/FeatureServer/0' # noqa
+        self.employee_url = 'https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/LMPD_Demographics/FeatureServer/0' # noqa
+        self.census_url = f"https://api.census.gov/data/2020/acs/acs5?get=NAME,B01001_001E,B01001_002E,B01001_026E,B02001_001E,B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B02001_007E,B02001_008E&for=county:111&in=state:21&key={api_key}" # noqa
+ 
         # Directory to save data
         self.output_directory = 'data'
         os.makedirs(self.output_directory, exist_ok=True)
-        
+
+        # API Call for Louisville open data to test response
     def fetch_api_data(self, url, expected_cols, filename):
         params = {
             'where': '1=1',
@@ -27,19 +29,20 @@ class DataBuilder:
         try:
             response = requests.get(f"{url}/query", params=params)
             response.raise_for_status()
-            data_list = [feature['attributes'] for feature in response.json().get('features', [])]
+            data_list = [feature['attributes'] for feature in response.json().get('features', [])] # noqa
             df = pd.DataFrame(data_list)
 
             if set(expected_cols).issubset(df.columns):
                 print(f"Data structure matches for {filename}")
                 df_full = self.fetch_full_data(url)
-                df_full.to_csv(os.path.join(self.output_directory, filename), index=False)
+                df_full.to_csv(os.path.join(self.output_directory, filename), index=False) # noqa
                 print(f"Data saved to {filename}")
             else:
                 print(f"Data structure has changed for {filename}")
         except requests.exceptions.RequestException as e:
             print(f"Error fetching data from {url}: {e}")
-    
+
+        # Full Louisville open data API call
     def fetch_full_data(self, url, batch_size=1000):
         data_list = []
         offset = 0
@@ -95,7 +98,7 @@ class DataBuilder:
                     "county": "County code"
                 }
                 df.rename(columns=column_mapping, inplace=True)
-                df.to_csv(os.path.join(self.output_directory, 'census.csv'), index=False)
+                df.to_csv(os.path.join(self.output_directory, 'census.csv'), index=False) # noqa
                 print("Census data saved to census.csv")
             else:
                 print(f"Error fetching census data: {response.status_code}")
@@ -106,13 +109,13 @@ class DataBuilder:
         # Citation data fetch
         expected_cols_citation = [
             'TYPE_OF_STOP', 'CITATION_CONTROL_NUMBER', 'ACTIVITY_RESULTS',
-            'OFFICER_GENDER', 'OFFICER_RACE', 'OFFICER_AGE_RANGE', 'ACTIVITY_DATE',
-            'ACTIVITY_TIME', 'ACTIVITY_LOCATION', 'ACTIVITY_DIVISION',
-            'ACTIVITY_BEAT', 'DRIVER_GENDER', 'DRIVER_RACE', 'DRIVER_AGE_RANGE',
-            'NUMBER_OF_PASSENGERS', 'WAS_VEHCILE_SEARCHED', 'REASON_FOR_SEARCH',
-            'ObjectId'
+            'OFFICER_GENDER', 'OFFICER_RACE', 'OFFICER_AGE_RANGE',
+            'ACTIVITY_DATE', 'ACTIVITY_TIME', 'ACTIVITY_LOCATION',
+            'ACTIVITY_DIVISION', 'ACTIVITY_BEAT', 'DRIVER_GENDER',
+            'DRIVER_RACE', 'DRIVER_AGE_RANGE', 'NUMBER_OF_PASSENGERS',
+            'WAS_VEHCILE_SEARCHED', 'REASON_FOR_SEARCH', 'ObjectId'
         ]
-        self.fetch_api_data(self.citation_url, expected_cols_citation, 'citation.csv')
+        self.fetch_api_data(self.citation_url, expected_cols_citation, 'citation.csv') # noqa
 
         # Employee data fetch
         expected_cols_employee = [
@@ -120,7 +123,7 @@ class DataBuilder:
             'OFFICER_AGE_RANGE', 'OFFICER_AGE', 'OFFICER_DIVISION',
             'OFFICER_ASSIGNMENT', 'OFFICER_YEARS_SWORN', 'ObjectId'
         ]
-        self.fetch_api_data(self.employee_url, expected_cols_employee, 'employee.csv')
+        self.fetch_api_data(self.employee_url, expected_cols_employee, 'employee.csv') # noqa
 
         # Census data fetch
         self.fetch_census_data()
