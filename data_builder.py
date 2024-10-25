@@ -10,7 +10,7 @@ class DataBuilder:
         self.citation_url = 'https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/LMPD_STOP_DATA_2019_(2)/FeatureServer/0' # noqa
         self.employee_url = 'https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/LMPD_Demographics/FeatureServer/0' # noqa
         self.census_url = f"https://api.census.gov/data/2020/acs/acs5?get=NAME,B01001_001E,B01001_002E,B01001_026E,B02001_001E,B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B02001_007E,B02001_008E&for=county:111&in=state:21&key={api_key}" # noqa
- 
+
         # Directory to save data
         self.output_directory = 'data'
         os.makedirs(self.output_directory, exist_ok=True)
