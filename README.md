@@ -6,54 +6,60 @@
 
 - [x] Build API test 
 - [x] Remove repeated code DRY 
-- [ ] Build classes 
+- [x] Build classes 
   - [x] Data builder done 
-  - [ ] Cleaning class needed 
-  - [ ] plot classes needed 
-- [ ] Rework plots use plotly
+  - [x] Cleaning class needed 
+  - [x] plot classes needed 
+- [x] Rework plots use plotly
   - [x] gender plots done   
 - [ ] use dash for the dashboard
-- [ ] make new requirements.txt
+- [x] make new requirements.txt
 
 <h2>Code Louisville Scope </h2>
 This project was created to fulfill the requirements of Code Louisville’s Python Data Analytics 2 class. The project had 4 requirements as follow. 
-<ol>
-<li> Read in two data sets. </li>
-<li> Make 3 plots </li>
-<li> Make a virtual environment for the project </li>
-<li> Annotate our code </li>
-</ol>
 
-### I revisited this project recently to add API calls to everything and play with a few new plotting ideas.
+  1. Read in two data sets. 
+  1. Make 3 plots </li>
+  1. Make a virtual environment for the project </li>
+  1. Annotate our code </li>
 
-The API calls are built into the `data_builder.py` file. You will need a API key for the Cencus data. Other than that pull which data you need and proceed to the `revisited.ipynb` file. 
 
-<h2> About The Data </h2>
+## About The Data 
 The purpose of the project was to determine if the LMPD had a racially motivated citation record. To make the calculations I used CSV sheets from Louisville Metro Open Data site. The first sheet was the police force which has all sworn officers with age sex etc. The next data set includes all the issued citations from the police with officers and drivers data. The final portion of data I used was from the census bureau to make a data frame for Louisville base line population. From the main graph we can determine that the black population did get more citations that our populations representation. The Hispanic police officers were the only group of officers that cited black drivers less that the Louisville population. However the real surprise of the data was that Hispanic population was cited above the population average by every race of officers. Ironically the Hispanic officer population was the only group of officers to cite above the population average. Alternatively we can conclude from the data the even though the population is almost equal in terms of genders. Males are almost twice as likely to receive a citation. 
 
-<h1> Requirements </h1>
+# Requirements
 
-This project was made with Anaconda installed, using the below packages in VS Code using Jupyter notebooks. PIP install packages as needed. Alternatively a virtual environment is included. 
-<br>
-<br>
-Documentation for venv: (https://docs.python.org/3/tutorial/venv.html)
-<br>
-<br>
-From the directory pip install the requirements.txt file by running "pip install -r requirements.txt"
+- Make Make a virtual environment on your machine (directions below)
 
-<h3>Project Requirements:</h3>
-Feature 1 Read data - Read data set from 2 csv file. 
-<br>
-Feature 2 - Manipulate and clean your data: In each data set I cleanded the sheets by removing missing data and dropping data that was not needed. I then joined the 2 data sets into one to work from. 
-<br>
-Feature 3 - Visualize data - Various plots were made to understand that data and a final cleaned cheet was made to compare that data. 
-<br>
-Feature 4 - Utilized a virtual environment and include instructions in the README on how the user should run.
-<br>
-Feature 5 - Interpreted the data by annotating the code via markdown cells.
-<br>
-<br>
-<h2> FIN </h2>
+- From the directory pip install the requirements.txt file by running "pip install -r requirements.txt"
+
+- Sign up for a Census API Key (https://api.census.gov/data/key_signup.html)
+
+- You can run `final.ipynb` to see a consolidated view of the project with little code. 
+
+- Alternatively you can run main.py to see the whole project and have the plot launch into a browser. 
+
+## Additional overview
+
+| File | Description | 
+|---|---| 
+| data_builder.py | This file contains the logic to do the api calls for the project. |
+| cleaning.py  | This file contains the logic to do all the cleaning for the project. |
+| viz.py | This file contains the logic to do all the plotting and stats for the project. |
+| main.py  | This file will run the project without using a jupyter notebook |
+| final.ipynb | This file contains the project in notebook form. I abstracted away most of the code so it's easier for the viewer to see the findings. | 
+
+
+### Project Requirements (detailed):
+- Feature 1 Read data from 2 data sources - This was accomplished by doing 3 api calls.  
+
+- Feature 2 - Manipulate and clean your data: The data was cleaned by removing missing data and dropping data that was not needed, and mapping values.
+
+- Feature 3 - Visualize data -  By utilizing the `groupby` method sub plots where made to reveal a gender and racial bias on citations.
+
+- Feature 4 - Utilized a virtual environment and include instructions in the README on how the user should run the project. 
+
+- Feature 5 - Interpreted the data by annotating the code via markdown cells.
 
 ###  Virutal Environment Instructions
 
@@ -71,13 +77,3 @@ folder in GitBash/Terminal.
 | Activate | `source venv/bin/activate` | `source venv/Scripts/activate` |
 | Install | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
 | Deactivate | `deactivate` | `deactivate` |
-
-***final_code.ipynb no longer works as the data is now formatted differently from Louisville open data. I removed the data before realizing that. Outputs are saved for viewing. 
-
-<!-- ## ARCGIS pip install Instructions 
-
-1. `pip install --upgrade pip setuptools wheel`
-1. `pip install "keyring>=19,<=21.8.*"`
-1. `pip install --use-pep517 arcgis==1.8.5.post3`
-
-In most recent build I have removed need for arcgis all together. Just run `data_builder.py` -->
