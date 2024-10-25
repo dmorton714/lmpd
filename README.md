@@ -35,6 +35,11 @@ The purpose of the project was to determine if the LMPD had a racially motivated
 
 - Sign up for a Census API Key (https://api.census.gov/data/key_signup.html)
 
+- Wen you get a API key:
+  - make a file named api_key.py
+  - inside the file store the key 
+  - like this: api_key = "your_key_here"
+
 - You can run `final.ipynb` to see a consolidated view of the project with little code. 
 
 - Alternatively you can run main.py to see the whole project and have the plot launch into a browser. 
